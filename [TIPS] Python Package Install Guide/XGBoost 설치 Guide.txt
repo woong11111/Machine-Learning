@@ -1,0 +1,19 @@
+Visual Studio 2017
+Cuda 10.0
+CuDNN 7.6.0
+
+1. https://picnet.com.au/blog/xgboost-windows-x64-binaries-for-download/ 들어가서 x64 GPU Enabled - xgboost.dll 파일 다운로드한다.
+
+2. Git Bash 키고 cd Desktop -> git clone https://github.com/dmlc/xgboost.git xgboost_install_dir 해서 다운한 뒤, 
+
+3. xgboost.dll 파일을 xgboost_install_dir\python-package\xgboost 폴더에 붙여넣기 한다.
+
+4. cd xgboost_install_dir\python-package에 들어가서 python setup.py install 하면 FileNotFoundError: [Errno 2] No such file or directory: '../dmlc-core/tracker/dmlc_tracker/tracker.py' 뜬다.
+
+5. https://github.com/dmlc/dmlc-core/tree/3943914eed66470bd010df581e29e4dca4f7df6f 들어가서 전체 폴더 ZIP 다운로드 한다.
+
+6. C:\Users\woong\Desktop\xgboost_install_dir\dmlc-core 폴더에 tracker 라는 폴더를 만들고, 5번에서 다운받은 dmlc_tracker 폴더를 붙여넣기 한다.
+
+7. 다시 cd xgboost_install_dir\python-package에 들어가서 python setup.py install 하면 깔린다.
+
+ 
